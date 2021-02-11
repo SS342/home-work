@@ -64,9 +64,9 @@ def select():
     conn.commit()
     tmp = cursor1.fetchall()
     if tmp:
-        text1w.configure(text = 'вход выполнен')
+        text1w.configure(text = 'ГўГµГ®Г¤ ГўГ»ГЇГ®Г«Г­ГҐГ­')
     else:
-        text1w.configure(text = 'вход не выполнен')
+        text1w.configure(text = 'ГўГµГ®Г¤ Г­ГҐ ГўГ»ГЇГ®Г«Г­ГҐГ­')
 
     entry1.delete(0,last = tk.END)
     entry1q.delete(0,last = tk.END)
@@ -121,7 +121,7 @@ def registr():
 conn = sqlite3.connect('internetshop.db')
 cursor1 = conn.cursor()
 
-#создаём таблицы~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#Г±Г®Г§Г¤Г ВёГ¬ ГІГ ГЎГ«ГЁГ¶Г»~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 cursor1.execute("""CREATE TABLE IF NOT EXISTS brand(
     ID   STRING,
@@ -334,8 +334,8 @@ f4 = tk.Frame(notebook,width = 1366, height = 768)
 f5 = tk.Frame(notebook,width = 1366, height = 768)
 f6 = tk.Frame(notebook,width = 1366, height = 768)
 
-notebook.add(f1, text = 'добавить')
-notebook.add(f2, text = 'рекомендации')
+notebook.add(f1, text = 'Г¤Г®ГЎГ ГўГЁГІГј')
+notebook.add(f2, text = 'Г°ГҐГЄГ®Г¬ГҐГ­Г¤Г Г¶ГЁГЁ')
 notebook.pack()
 
 text1w = ttk.Label(f1,text="ENTER:", width = 15) 
@@ -353,14 +353,14 @@ entry1q = ttk.Entry(f1, width = 22)
 entry1q.pack(side=tk.TOP)
 
 
-text1qqqq = ttk.Label(f1,text="по всем вопросам обращайтесь в оборотня ;)", width = 150) 
+text1qqqq = ttk.Label(f1,text="ГЇГ® ГўГ±ГҐГ¬ ГўГ®ГЇГ°Г®Г±Г Г¬ Г®ГЎГ°Г Г№Г Г©ГІГҐГ±Гј Гў Г®ГЎГ®Г°Г®ГІГ­Гї ;)", width = 150) 
 text1qqqq.pack(side=tk.TOP)
 
 
-but1 = ttk.Button(f1, text="войти",command = select)                                  #thiiiiis
+but1 = ttk.Button(f1, text="ГўГ®Г©ГІГЁ",command = select)                                  #thiiiiis
 but1.pack(side=tk.TOP)
 
-but1q = ttk.Button(f1, text="регистрация",command = registr)
+but1q = ttk.Button(f1, text="Г°ГҐГЈГЁГ±ГІГ°Г Г¶ГЁГї",command = registr)
 but1q.pack(side=tk.TOP)
 
 
@@ -370,31 +370,31 @@ but3 = ttk.Button(f3, text="delete", command = delete)
 but3.grid(row=1, column=1)
 
 lb = tk.Listbox(f4, width = 50)
-lb.insert(tk.END, '1-админ','2-консультант','3-программист',"4-веб-дизайнер","5-фотограф","6-директор","7-заместитель","8-секретарь")
+lb.insert(tk.END, '1-Г Г¤Г¬ГЁГ­','2-ГЄГ®Г­Г±ГіГ«ГјГІГ Г­ГІ','3-ГЇГ°Г®ГЈГ°Г Г¬Г¬ГЁГ±ГІ',"4-ГўГҐГЎ-Г¤ГЁГ§Г Г©Г­ГҐГ°","5-ГґГ®ГІГ®ГЈГ°Г Гґ","6-Г¤ГЁГ°ГҐГЄГІГ®Г°","7-Г§Г Г¬ГҐГ±ГІГЁГІГҐГ«Гј","8-Г±ГҐГЄГ°ГҐГІГ Г°Гј")
 lb.grid(row = 1,column = 0)
 
-text2 = ttk.Label(f4,text="<--список доступных должностей:", width = 30) 
+text2 = ttk.Label(f4,text="<--Г±ГЇГЁГ±Г®ГЄ Г¤Г®Г±ГІГіГЇГ­Г»Гµ Г¤Г®Г«Г¦Г­Г®Г±ГІГҐГ©:", width = 30) 
 text2.grid(row = 1, column = 1)
 
-text3 = ttk.Label(f4,text="имя:", width = 10) 
+text3 = ttk.Label(f4,text="ГЁГ¬Гї:", width = 10) 
 text3.grid(row = 2, column = 0)
 
 entry2 = ttk.Entry(f4, width = 22)
 entry2.grid(row = 3, column = 1)
 
-text4 = ttk.Label(f4,text="фамилия:", width = 10) 
+text4 = ttk.Label(f4,text="ГґГ Г¬ГЁГ«ГЁГї:", width = 10) 
 text4.grid(row = 4, column = 0)
 
 entry3 = ttk.Entry(f4, width = 22)
 entry3.grid(row = 5, column = 1)
 
-text5 = ttk.Label(f4,text="отчество:", width = 10) 
+text5 = ttk.Label(f4,text="Г®ГІГ·ГҐГ±ГІГўГ®:", width = 10) 
 text5.grid(row = 6, column = 0)
 
 entry4 = ttk.Entry(f4, width = 22)
 entry4.grid(row = 7, column = 1)
 
-text6 = ttk.Label(f4,text="номер вашей должности:", width = 25) 
+text6 = ttk.Label(f4,text="Г­Г®Г¬ГҐГ° ГўГ ГёГҐГ© Г¤Г®Г«Г¦Г­Г®Г±ГІГЁ:", width = 25) 
 text6.grid(row = 8, column = 0)
 
 entry5 = ttk.Entry(f4, width = 22)
@@ -407,13 +407,13 @@ but4.grid()
 
 
 lb1 = tk.Listbox(f5, width = 50)
-lb1.insert(tk.END, '1-футболки','2-обувь','3-ноутбуки',"4-сладости","5-картины")
+lb1.insert(tk.END, '1-ГґГіГІГЎГ®Г«ГЄГЁ','2-Г®ГЎГіГўГј','3-Г­Г®ГіГІГЎГіГЄГЁ',"4-Г±Г«Г Г¤Г®Г±ГІГЁ","5-ГЄГ Г°ГІГЁГ­Г»")
 lb1.grid(row = 1,column = 0)
 
-text7 = ttk.Label(f5,text="<--список доступных типов:", width = 30) 
+text7 = ttk.Label(f5,text="<--Г±ГЇГЁГ±Г®ГЄ Г¤Г®Г±ГІГіГЇГ­Г»Гµ ГІГЁГЇГ®Гў:", width = 30) 
 text7.grid(row = 1, column = 1)
 
-text8 = ttk.Label(f5,text="список доступных брендов-->", width = 30) 
+text8 = ttk.Label(f5,text="Г±ГЇГЁГ±Г®ГЄ Г¤Г®Г±ГІГіГЇГ­Г»Гµ ГЎГ°ГҐГ­Г¤Г®Гў-->", width = 30) 
 text8.grid(row = 2, column = 1)
 
 lb2 = tk.Listbox(f5, width = 50)
@@ -456,7 +456,7 @@ entry1qqw = ttk.Entry(f6, width = 22)
 entry1qqw.pack(side=tk.TOP)
 
 var = tk.BooleanVar()
-cb = Checkbutton(f6,text = 'отказаться от рассылки', variable = var, command = qw)
+cb = Checkbutton(f6,text = 'Г®ГІГЄГ Г§Г ГІГјГ±Гї Г®ГІ Г°Г Г±Г±Г»Г«ГЄГЁ', variable = var, command = qw)
 cb.pack(side=tk.TOP)
 
 but5www = ttk.Button(f6, text="0OK", command = ok)
